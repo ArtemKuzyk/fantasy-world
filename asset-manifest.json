@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fantasy-world/static/css/main.62d9d699.css",
+    "main.js": "/fantasy-world/static/js/main.3fbc51fe.js",
+    "static/js/787.179b8eb8.chunk.js": "/fantasy-world/static/js/787.179b8eb8.chunk.js",
+    "index.html": "/fantasy-world/index.html",
+    "main.62d9d699.css.map": "/fantasy-world/static/css/main.62d9d699.css.map",
+    "main.3fbc51fe.js.map": "/fantasy-world/static/js/main.3fbc51fe.js.map",
+    "787.179b8eb8.chunk.js.map": "/fantasy-world/static/js/787.179b8eb8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.62d9d699.css",
+    "static/js/main.3fbc51fe.js"
+  ]
+}
