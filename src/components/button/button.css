@@ -1,0 +1,11 @@
+.action-button {
+  background-color: green;
+  border: 3px solid #000;
+  border-radius: 10px;
+  color: aliceblue;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  min-width: 75px;
+  padding: 5px;
+}/*# sourceMappingURL=button.css.map */

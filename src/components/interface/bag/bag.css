@@ -1,0 +1,66 @@
+.interface_bag-button {
+  background-image: url("../../../assets/money-bag.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  bottom: 30px;
+  cursor: pointer;
+  height: 45px;
+  position: absolute;
+  right: 30px;
+  width: 45px;
+}
+
+.bagButtonDisplayNone {
+  display: none !important;
+}
+
+.interface_bag-container {
+  background-color: beige;
+  border: 1px solid black;
+  border-radius: 5px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 30px;
+}
+.interface_bag-container .interface_bag-name {
+  background-color: violet;
+  border-bottom: 1px solid black;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3px;
+  margin: 0;
+}
+.interface_bag-container .interface_bag-name p {
+  margin: 0;
+}
+.interface_bag-container .interface_bag-name button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+  margin: 0;
+}
+.interface_bag-container .interface_bag-item-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 120px;
+  width: 100px;
+}
+.interface_bag-container ul[role=navigation] {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 2px;
+}
+.interface_bag-container ul[role=navigation] li {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.interface_bag-container ul[role=navigation] li::marker {
+  content: "";
+}/*# sourceMappingURL=bag.css.map */
