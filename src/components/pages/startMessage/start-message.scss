@@ -1,0 +1,39 @@
+.start-menu_container{
+    align-items: center;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    .start-menu_button{
+        background-color: green;
+        border: 3px solid #000;
+        border-radius: 10px;
+        color: aliceblue;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 10px;
+        min-width: 75px;
+        padding: 5px;
+    }
+    .start-menu_load-form{
+        background-color: #fff;
+        border: #000 solid 1px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        > * {
+            margin: 5px;
+        }
+    }
+    .display{
+        display: none;
+    }
+}
+
+.no-decoration{
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}

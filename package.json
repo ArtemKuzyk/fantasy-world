@@ -1,8 +1,7 @@
 {
   "name": "fantasy-world",
-  "homepage": "https://ArtemKuzyk.github.io/fantasy-world",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "dependencies": {
     "@qiuz/react-image-map": "^1.1.8",
     "@testing-library/jest-dom": "^5.16.5",
@@ -12,6 +11,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-paginate": "^8.2.0",
+    "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -19,9 +19,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
