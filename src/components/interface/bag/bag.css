@@ -1,3 +1,13 @@
+.interface_bag-item-info {
+  background-color: antiquewhite;
+  border: 1px solid #000;
+  border-radius: 5px;
+  bottom: 219px;
+  position: absolute;
+  right: 30px;
+  width: 102px;
+}
+
 .interface_bag-button {
   background-image: url("../../../assets/money-bag.png");
   background-repeat: no-repeat;
@@ -23,6 +33,7 @@
   flex-direction: column;
   position: absolute;
   right: 30px;
+  width: 102px;
 }
 .interface_bag-container .interface_bag-name {
   background-color: violet;
@@ -63,4 +74,8 @@
 }
 .interface_bag-container ul[role=navigation] li::marker {
   content: "";
+}
+
+.visibility-info-container {
+  visibility: hidden;
 }/*# sourceMappingURL=bag.css.map */

@@ -10,15 +10,13 @@ import './bag.css'
 // const items = [1, 2, 3, ]
 
 export function Bag(){
-
-
     const bagItems = LocalStorageService.get(LS_KEYS.BAG);
-    // console.log(bagItems)
     const [bagButtonDisplayNone, setBagButtonDisplayNone] = useState(false);
     const [bagItemContainerDisplayNone, setBagItemContainerDisplayNone] = useState(true);
+    const [hoverVal, setHoverVal] = useState('');
+    const [visibilityInfoContainer, setVisibilityInfoContainer] = useState(true);
 
     const handleBagButtonClick = (e) => {
-        // console.log(e.target)
         setBagButtonDisplayNone(!bagButtonDisplayNone);
         setBagItemContainerDisplayNone(!bagItemContainerDisplayNone);
     }
@@ -30,6 +28,11 @@ export function Bag(){
 
     return(
         <>
+            <div className={cn('interface_bag-item-info', {'visibility-info-container' : visibilityInfoContainer})}>
+                <p>
+                    {hoverVal}
+                </p>
+            </div>
             <div className= {cn('interface_bag-button', {"bagButtonDisplayNone" : bagButtonDisplayNone})} 
                  onClick={(e) => handleBagButtonClick(e)}></div>
             <div className={cn("interface_bag-container", {"bagItemContainerDisplayNone" : bagItemContainerDisplayNone})}>
@@ -39,7 +42,7 @@ export function Bag(){
                 <div className='interface_bag-item-container'>
                     {
                         bagItems
-                        ? Object.keys(bagItems).map(el => <BagItem key={`${el}`} data={bagItems[el]} />)
+                        ? Object.keys(bagItems).map(el => <BagItem key={`${el}`} data={[bagItems[el], setHoverVal, setVisibilityInfoContainer]} />)
                         : ""
                     }
                 </div>

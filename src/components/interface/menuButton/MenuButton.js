@@ -21,7 +21,7 @@ const saveGameProgress = () => {
 }
 
 const MENU_ITEMS = [
-    {name : 'Save progress', onClickAction : () => {let val = saveGameProgress(); console.log(val); return val;}}, 
+    {name : 'Save progress', onClickAction : () => {let val = saveGameProgress(); return val;}}, 
     {name : 'Restart', onClickAction : () => {}},
     {name : 'Show personal charackteristics', onClickAction : () => {}},
     {name : 'Settings', onClickAction : () => {}},
