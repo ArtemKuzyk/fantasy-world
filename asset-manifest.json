@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/fantasy-world/static/css/main.5400ab7d.css",
-    "main.js": "/fantasy-world/static/js/main.553650c5.js",
+    "main.css": "/fantasy-world/static/css/main.af0f68f9.css",
+    "main.js": "/fantasy-world/static/js/main.6f11fa90.js",
     "static/js/787.179b8eb8.chunk.js": "/fantasy-world/static/js/787.179b8eb8.chunk.js",
     "index.html": "/fantasy-world/index.html",
-    "main.5400ab7d.css.map": "/fantasy-world/static/css/main.5400ab7d.css.map",
-    "main.553650c5.js.map": "/fantasy-world/static/js/main.553650c5.js.map",
+    "main.af0f68f9.css.map": "/fantasy-world/static/css/main.af0f68f9.css.map",
+    "main.6f11fa90.js.map": "/fantasy-world/static/js/main.6f11fa90.js.map",
     "787.179b8eb8.chunk.js.map": "/fantasy-world/static/js/787.179b8eb8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5400ab7d.css",
-    "static/js/main.553650c5.js"
+    "static/css/main.af0f68f9.css",
+    "static/js/main.6f11fa90.js"
   ]
 }
