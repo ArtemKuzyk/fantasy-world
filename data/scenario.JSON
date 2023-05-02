@@ -45,7 +45,8 @@
             "obj-name" : "Амбарний ключ",
             "obj-store-name" : "ambar-key",
             "obj-image" : "./images/ambar-key.png",
-            "obj-icon" : "./icons/key.png"
+            "obj-icon" : "./icons/key.png",
+            "obj-action-id" : "1"
         },
         "message-image" : "./images/ambar-key.png",
         "_obj" : "ambar-key",
@@ -58,7 +59,8 @@
             "obj-name" : "Годинник батька",
             "obj-store-name" : "father`s-clock",
             "obj-image" : "./images/father`s-clock.png",
-            "obj-icon" : "./icons/pocket-watch.png"
+            "obj-icon" : "./icons/pocket-watch.png",
+            "obj-action-id" : "2"
         },
         "message-image" : "./images/father`s-clock.png",
         "_obj" : "father`s-clock",
@@ -71,7 +73,8 @@
             "obj-name" : "Амулет сонця (оберіг)",
             "obj-store-name" : "amulet",
             "obj-image" : "./images/amulet.png",
-            "obj-icon" : "./icons/amulet.png"
+            "obj-icon" : "./icons/amulet.png",
+            "obj-action-id" : "3"
         },
         "message-image" : "./images/amulet.png",
         "_obj" : "amulet",
