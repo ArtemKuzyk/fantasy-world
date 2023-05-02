@@ -1,0 +1,29 @@
+.interface_bag_bag-item-info {
+  background-color: antiquewhite;
+  border: 3px solid #000;
+  border-radius: 15px;
+  left: 50%;
+  padding: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.interface_bag_bag-item-info .close {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.interface_bag_bag-item-info .action {
+  background-color: green;
+  border: 3px solid #000;
+  border-radius: 10px;
+  color: aliceblue;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  min-width: 75px;
+  padding: 5px;
+}/*# sourceMappingURL=bag-item-info.css.map */

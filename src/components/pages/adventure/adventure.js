@@ -6,6 +6,7 @@ import { Message } from '../../message';
 import { BackButton } from '../../backButton';
 import { MenuButton } from '../../interface/menuButton';
 import { Bag } from '../../interface/bag';
+import { BagItemInfo } from '../../interface/bagItemInfo';
 
 
 export function Adventure(){
@@ -76,6 +77,7 @@ export function Adventure(){
                 }
                 <Bag />
                 <MenuButton />
+                <BagItemInfo />
                 </>
                 : ""
             }
