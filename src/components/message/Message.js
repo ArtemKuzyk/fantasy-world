@@ -1,15 +1,10 @@
-import { Button } from '../button';
-
-import './message.css';     
 import { useContent } from '../../hooks/use-content';
-import { useEffect } from 'react';
+import { Button } from '../button';
+import './message.css';     
 
 export function Message(){
 
     const {message, setMessage} = useContent();
-    // useEffect(() => {
-    //     console.log(message)
-    // })
 
     return(
         <>
@@ -24,7 +19,7 @@ export function Message(){
                             : ""
                         }
                         <div className='message_button-container'>
-                            {Object.keys(message.action).map(el => <Button key={el} actions={el} setMessage={setMessage} actionsText={message.action[el]}/>)}
+                            {Object.keys(message.action).map(el => <Button key={el} actions={el} actionsText={message.action[el]}/>)}
                         </div>
                       </>
                     : ''

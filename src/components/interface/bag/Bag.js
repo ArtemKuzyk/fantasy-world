@@ -1,15 +1,20 @@
 
 import { useState } from 'react';
 import ReactPaginate from 'react-paginate';
+import { useDispatch } from 'react-redux';
 import cn from 'classnames';
-import { LocalStorageService, LS_KEYS } from '../../../services/localStorage'
-import { BagItem } from '../bagItem'
+import { bagItemDisplayFalse } from '../../../store/bagItemSlice';
+import { LocalStorageService, LS_KEYS } from '../../../services/localStorage';
+import { BagItem } from '../bagItem';
 
 import './bag.css'
 
 // const items = [1, 2, 3, ]
 
 export function Bag(){
+
+    const dispatch = useDispatch();
+
     const bagItems = LocalStorageService.get(LS_KEYS.BAG);
     const [bagButtonDisplayNone, setBagButtonDisplayNone] = useState(false);
     const [bagItemContainerDisplayNone, setBagItemContainerDisplayNone] = useState(true);
@@ -24,6 +29,7 @@ export function Bag(){
     const handleClickInventarClose = () => {
         setBagButtonDisplayNone(!bagButtonDisplayNone);
         setBagItemContainerDisplayNone(!bagItemContainerDisplayNone);
+        dispatch(bagItemDisplayFalse());
     }
 
     return(

@@ -3,10 +3,10 @@ import { ImageMap } from '@qiuz/react-image-map';
 import { LocalStorageService, LS_KEYS } from '../../../services/localStorage';
 import { useContent } from '../../../hooks/use-content'
 import { Message } from '../../message';
-import { BackButton } from '../../backButton';
 import { MenuButton } from '../../interface/menuButton';
 import { Bag } from '../../interface/bag';
 import { BagItemInfo } from '../../interface/bagItemInfo';
+import { Button } from '../../button';
 
 
 export function Adventure(){
@@ -23,8 +23,8 @@ export function Adventure(){
       }, [message])
 
     const onMapClick = (data, index) => {
-        console.log(data)
-        console.log(index)
+        // console.log(data)
+        // console.log(index)
         setMessage(LocalStorageService.get('scenario')[`${data.action}`])
         const foundObject = LocalStorageService.get('scenario')[`${data.action}`].obj;
         const ls_key_name = foundObject["obj-store-name"];
@@ -32,7 +32,6 @@ export function Adventure(){
           let bagItems = LocalStorageService.get(LS_KEYS.BAG);
           bagItems[ls_key_name] = foundObject;
           LocalStorageService.set(LS_KEYS.BAG, bagItems);
-          // LocalStorageService.remove(action);
         } else {
           LocalStorageService.set(LS_KEYS.BAG, {[ls_key_name] : foundObject});
         } 
@@ -56,15 +55,16 @@ export function Adventure(){
                 {
                     message["back-button"]
                     ? (<>
-                        <BackButton />
+                        <Button 
+                          backButtonStyles={message["back-button"]['styles']} 
+                          actionsText={'Повернутись'} 
+                          actions={message["back-button"]["action"]}
+                        />
                         {
                         mapArea 
                         ?<ImageMap className="usage-map" 
                                 src={backgroundImageURL} 
                                 map={mapArea} 
-                                // onMapClik={(area) => {setMessage(LocalStorageService.get('scenario')[`${area.action}`])
-                                // onMapClick(area);
-                                // }} 
                                 onMapClick={onMapClick}
                                 />
                         : ""

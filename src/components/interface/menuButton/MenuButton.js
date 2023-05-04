@@ -1,8 +1,8 @@
 import { createElement, useState } from 'react';
 import cn from 'classnames';
-import { MenuItem } from '../menuItem';
 import './menu-button.css'
 import { LS_KEYS, LocalStorageService } from '../../../services/localStorage';
+import { Button } from '../../button';
 
 const saveGameProgress = () => {
     const name = 'Fantasy-game-save';
@@ -20,12 +20,19 @@ const saveGameProgress = () => {
     return link;
 }
 
+const restartGame = () => {
+    console.log('restart()')
+    LocalStorageService.clear();
+    window.location.reload();
+}
+
+
 const MENU_ITEMS = [
-    {name : 'Save progress', onClickAction : () => {let val = saveGameProgress(); return val;}}, 
-    {name : 'Restart', onClickAction : () => {}},
+    {name : 'Save progress', onClickAction : () => saveGameProgress()}, 
+    {name : 'Restart', onClickAction : () => restartGame()},
     {name : 'Show personal charackteristics', onClickAction : () => {}},
     {name : 'Settings', onClickAction : () => {}},
-    {name : 'Quit', onClickAction : () => {}}
+    {name : 'Quit', onClickAction : () => {window.open('http://localhost:3000/', '_self')}}
 ];
 
 export function MenuButton(){
@@ -42,7 +49,24 @@ export function MenuButton(){
             
             </div>
             <div className={cn('interface_menu-container', {'interface_menu-container__display-none' : display})}>
-                {MENU_ITEMS.map(el => <MenuItem data={el} key={el.name} />)}
+                {MENU_ITEMS.map(el => {
+                    let actionText;
+                    let innerLinkStyles
+                    el.name === 'Save progress'
+                    ?<>
+                        {actionText = el.onClickAction()} 
+                        {innerLinkStyles = true}
+                    </>
+                    : actionText = el.name
+                    return(
+                        <Button 
+                            key={el.name} 
+                            innerLinkStyles={innerLinkStyles}
+                            actionsText={actionText} 
+                            onClickAction={el.onClickAction} 
+                        />)}
+                    )
+                }
             </div>
         </>
     );

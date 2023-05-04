@@ -8,4 +8,23 @@
     margin: 10px;
     min-width: 75px;
     padding: 5px;
+    a{
+        color: inherit;
+        display: block;
+        height: 100%;
+        padding: 5px;
+        text-decoration: none;
+        width: 100%;
+    }
+}
+
+.back-button{
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    z-index: 5;
+}
+
+.inner-link{
+    padding: 0 !important;
 }
