@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/fantasy-world/static/css/main.f141fd1e.css",
-    "main.js": "/fantasy-world/static/js/main.35988d60.js",
-    "static/js/787.179b8eb8.chunk.js": "/fantasy-world/static/js/787.179b8eb8.chunk.js",
-    "index.html": "/fantasy-world/index.html",
-    "main.f141fd1e.css.map": "/fantasy-world/static/css/main.f141fd1e.css.map",
-    "main.35988d60.js.map": "/fantasy-world/static/js/main.35988d60.js.map",
-    "787.179b8eb8.chunk.js.map": "/fantasy-world/static/js/787.179b8eb8.chunk.js.map"
+    "main.css": "/static/css/main.60e03346.css",
+    "main.js": "/static/js/main.583e1ef3.js",
+    "static/js/787.179b8eb8.chunk.js": "/static/js/787.179b8eb8.chunk.js",
+    "index.html": "/index.html",
+    "main.60e03346.css.map": "/static/css/main.60e03346.css.map",
+    "main.583e1ef3.js.map": "/static/js/main.583e1ef3.js.map",
+    "787.179b8eb8.chunk.js.map": "/static/js/787.179b8eb8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f141fd1e.css",
-    "static/js/main.35988d60.js"
+    "static/css/main.60e03346.css",
+    "static/js/main.583e1ef3.js"
   ]
 }
