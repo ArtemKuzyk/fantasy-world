@@ -1,11 +1,32 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import cn from 'classnames'
-import './start-message.css'
+import cn from 'classnames';
+import { LocalStorageService } from '../../../services/localStorage';
+import './start-message.css';
+import { useEffect } from 'react';
 
 export function StartMessage() {
 
     const [display, setDisplay] = useState(true);
+    const [savedFile, setSavedFile] = useState();
+
+    const loadGame = (e) => {
+        e.preventDefault()
+        console.log(savedFile.type)
+        if(savedFile){
+            LocalStorageService.clear();
+            if(typeof savedFile === 'object'){
+
+            }
+        } else {
+            alert('Файл збереження не знайдено :(')
+        }
+        
+    }
+
+    useEffect(() => {
+        console.log(savedFile);
+    }, [savedFile])
 
     return(
         <>
@@ -18,11 +39,15 @@ export function StartMessage() {
                 <button className={cn('start-menu_button')} onClick={() => setDisplay(!display)}>
                     Load game
                 </button>
-                <form action='' className={cn('start-menu_load-form', {'display' : display})}>
-                    <label>
-                        <input type='text' placeholder='Write your progress code'></input>
+                <form className={cn('start-menu_load-form', {'display' : display})}>
+                    <label htmlFor='load-saved-file'> Choose file
+                        <input name='load-saved-file' 
+                               id='load-saved-file' 
+                               type='file' 
+                               placeholder='Write your progress code'
+                               onChange={e => console.log(e) /*setSavedFile(e.target.files)*/}></input>
                     </label>
-                    <button type='submit'>
+                    <button onClick={(e) => loadGame(e)}>
                         Load
                     </button>
                 </form>

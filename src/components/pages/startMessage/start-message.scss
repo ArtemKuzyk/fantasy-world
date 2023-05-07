@@ -17,8 +17,8 @@
         padding: 5px;
     }
     .start-menu_load-form{
-        background-color: #fff;
-        border: #000 solid 1px;
+        background-color: antiquewhite;
+        border: #000 solid 3px;
         border-radius: 5px;
         display: flex;
         flex-direction: column;
@@ -26,6 +26,17 @@
         > * {
             margin: 5px;
         }
+    }
+    input[type='file']{
+        display: none;
+    }
+    button, label{
+        background-color: green;
+        border: 3px solid #000;
+        border-radius: 10px;
+        color: #fff;
+        padding: 5px;
+        font-size: 16px;
     }
     .display{
         display: none;
